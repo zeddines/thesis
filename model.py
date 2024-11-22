@@ -18,5 +18,9 @@ class MLP(nn.Module):
         neg_score = self.layers(neg)
         return pos_score, neg_score
 
+    def predict(self, ui):
+        score = self.layers(ui)
+        return score
+
 
 
